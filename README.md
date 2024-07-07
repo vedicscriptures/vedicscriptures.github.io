@@ -1,37 +1,43 @@
 ---
-description: Bhagavad-Gita-API is An opensource lightweight Node.js based rest API on Vedic Scripture Shrimad Bhagavad Gita
+description: Bhagavad-Gita-API is an open-source lightweight Node.js-based REST API for the Vedic Scripture Shrimad Bhagavad Gita.
 ---
 
 <div align="center"><h1>Bhagavad Gita API</h1></div>
 <p align="center"><img alt="Bhagavad Gita API" src="https://repository-images.githubusercontent.com/314205765/0bb18d80-2b22-11eb-8f6f-ccf20c0c2679" width="400vw"/></p>
 
-## 🚀 Api Reference
+## 🚀 API Reference
 
 1. GET [/slok/:ch/:sl](#get-slokchsl)
 2. GET [/chapters](#get-chapters)
 3. GET [/chapter/:ch](#get-chapterch)
-            
-
 
 ## GET /slok/:ch/:sl
 
-**api-method** : get 
+**api-method**: get 
 
-**url** : https://vedicscriptures.github.io/slok/:ch/:sl
+**url**: https://vedicscriptures.github.io/slok/:ch/:sl
 
-**description** : This endpoint allows you to GET data from Particuler slok & chapter of Shreemad Bhagavad Gita
+**description**: Retrieve specific slok and chapter from Shreemad Bhagavad Gita.
 
-**Query parameter** :
-  - **ch** - (_Chapter Number_)
-    - **type** : _integer_
-    - **description** : _specfic chapter number from any of 18 chapters_
-    - **required** : _optional_
-    - **example** : _1 to 18_
-  - **sl** - (_Slok Number_)
-    - **type** : _integer_
-    - **description** : _specfic slok number avilable in that particuler chapters_
-    - **required** : _optional_
-    - **example** : _1_  
+**Query parameters**:
+  - **ch** (_Chapter Number_)
+    - **type**: _integer_
+    - **description**: _specific chapter number from any of the 18 chapters_
+    - **required**: _optional_
+    - **example**: _1 to 18_
+  - **sl** (_Slok Number_)
+    - **type**: _integer_
+    - **description**: _specific slok number available in that particular chapter_
+    - **required**: _optional_
+    - **example**: _1_
+
+### Example (JSON Fetch)
+
+```json
+fetch('https://vedicscriptures.github.io/slok/1/1')
+  .then(response => response.json())
+  .then(data => console.log(data));
+```
 
 ### Output
 
@@ -134,33 +140,32 @@ description: Bhagavad-Gita-API is An opensource lightweight Node.js based rest A
   }
 }
 ```
+
 ## GET /chapters
 
-**api-method** : get 
+**api-method**: get 
 
-**url** : https://vedicscriptures.github.io/chapters
+**url**: https://vedicscriptures.github.io/chapters
 
-**description** : This endpoint allows you to get all Chapters details of Shreemad Bhagavad Gita.
+**description**: Retrieve details of all chapters in Shreemad Bhagavad Gita.
+
+### Example (JSON Fetch)
+
+```json
+fetch('https://vedicscriptures.github.io/chapters')
+  .then(response => response.json())
+  .then(data => console.log(data));
+```
 
 ### Output
+
 ```json
 [
   {
     "chapter_number": 1,
     "verses_count": 47,
-    "name": "अर्जुनविषादयोग",
-    "translation": "Arjuna Visada Yoga",
-    "transliteration": "Arjun Viṣhād Yog",
-    "meaning": {
-      "en": "Arjuna's Dilemma",
-      "hi": "अर्जुन विषाद योग"
-    },
-    "summary": {
-      "en": "The first chapter of the Bhagavad Gita - Arjuna Vishada Yoga introduces the setup, the setting, the characters and the circumstances that led to the epic battle of Mahabharata, fought between the Pandavas and the Kauravas. It outlines the reasons that led to the revelation of the of Bhagavad Gita.\nAs both armies stand ready for the battle, the mighty warrior Arjuna, on observing the warriors on both sides becomes increasingly sad and depressed due to the fear of losing his relatives and friends and the consequent sins attributed to killing his own relatives. So, he surrenders to Lord Krishna, seeking a solution. Thus, follows the wisdom of the Bhagavad Gita.",
-      "hi": "भगवद गीता का पहला अध्याय अर्जुन विशाद योग उन पात्रों और परिस्थितियों का परिचय कराता है जिनके कारण पांडवों और कौरवों के बीच महाभारत का महासंग्राम हुआ। यह अध्याय उन कारणों का वर्णन करता है जिनके कारण भगवद गीता का ईश्वरावेश हुआ। जब महाबली योद्धा अर्जुन दोनों पक्षों पर युद्ध के लिए तैयार खड़े योद्धाओं को देखते हैं तो वह अपने ही रिश्तेदारों एवं मित्रों को खोने के डर तथा फलस्वरूप पापों के कारण दुखी और उदास हो जाते हैं। इसलिए वह श्री कृष्ण को पूरी तरह से आत्मसमर्पण करते हैं। इस प्रकार, भगवद गीता के ज्ञान का प्रकाश होता है।"
-    }
+    "name": "अर्जुनविषादयोग"
   },
-  {"chapter 2": "chapter 17"},
   {
     "chapter_number": 18,
     "verses_count": 78,
@@ -178,38 +183,37 @@ description: Bhagavad-Gita-API is An opensource lightweight Node.js based rest A
   }
 ]
 ```
+
 ## GET /chapter/:ch
 
-**api-method** : get 
+**api-method**: get 
 
-**url** : https://vedicscriptures.github.io/chapter/:ch
+**url**: https://vedicscriptures.github.io/chapter/:ch
 
-**description** : GET Particular Chapters details of Shreemad Bhagavad Gita
+**description**: Retrieve details of a specific chapter in Shreemad Bhagavad Gita.
 
-**parameter** :
-  - **:ch** - (_Chapter Number_)
-    - **type** : _integer_
-    - **description** : _specfic chapter number from any of 18 chapters_
-    - **required** : _true_
-    - **default** : _null_
-    - **example** : _1 to 18_
+**Parameter**:
+  - **:ch** (_Chapter Number_)
+    - **type**: _integer_
+    - **description**: _specific chapter number from any of the 18 chapters_
+    - **required**: _true_
+    - **example**: _1 to 18_
+
+### Example (JSON Fetch)
+
+```json
+fetch('https://vedicscriptures.github.io/chapter/1')
+  .then(response => response.json())
+  .then(data => console.log(data));
+```
 
 ### Output
+
 ```json
 {
   "chapter_number": 1,
   "verses_count": 47,
-  "name": "अर्जुनविषादयोग",
-  "translation": "Arjuna Visada Yoga",
-  "transliteration": "Arjun Viṣhād Yog",
-  "meaning": {
-    "en": "Arjuna's Dilemma",
-    "hi": "अर्जुन विषाद योग"
-  },
-  "summary": {
-    "en": "The first chapter of the Bhagavad Gita - Arjuna Vishada Yoga introduces the setup, the setting, the characters and the circumstances that led to the epic battle of Mahabharata, fought between the Pandavas and the Kauravas. It outlines the reasons that led to the revelation of the of Bhagavad Gita.\nAs both armies stand ready for the battle, the mighty warrior Arjuna, on observing the warriors on both sides becomes increasingly sad and depressed due to the fear of losing his relatives and friends and the consequent sins attributed to killing his own relatives. So, he surrenders to Lord Krishna, seeking a solution. Thus, follows the wisdom of the Bhagavad Gita.",
-    "hi": "भगवद गीता का पहला अध्याय अर्जुन विशाद योग उन पात्रों और परिस्थितियों का परिचय कराता है जिनके कारण पांडवों और कौरवों के बीच महाभारत का महासंग्राम हुआ। यह अध्याय उन कारणों का वर्णन करता है जिनके कारण भगवद गीता का ईश्वरावेश हुआ। जब महाबली योद्धा अर्जुन दोनों पक्षों पर युद्ध के लिए तैयार खड़े योद्धाओं को देखते हैं तो वह अपने ही रिश्तेदारों एवं मित्रों को खोने के डर तथा फलस्वरूप पापों के कारण दुखी और उदास हो जाते हैं। इसलिए वह श्री कृष्ण को पूरी तरह से आत्मसमर्पण करते हैं। इस प्रकार, भगवद गीता के ज्ञान का प्रकाश होता है।"
-  }
+  "name": "अर्जुनविषादयोग"
 }
 ```
 
