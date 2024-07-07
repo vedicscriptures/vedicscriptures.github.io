@@ -16,7 +16,7 @@ locale                   : "en-US"
 title                    : "Bhagvad Gita API"
 name                     : &name "ptprashanttripathi" # &name is a YAML anchor which can be *referenced later
 description              : &description "Bhagavad-Gita-API is An opensource lightweight Node.js based rest API on Vedic Scripture Shrimad Bhagavad Gita."
-url                      : https://bhagavadgitaapi.in/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://vedicscriptures.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : "vedicscriptures/bhagavad-gita-api"
 teaser                   : "https://repository-images.githubusercontent.com/314205765/0bb18d80-2b22-11eb-8f6f-ccf20c0c2679" # path of fallback teaser image, e.g. "/assets/images/500x300.png"

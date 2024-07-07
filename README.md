@@ -17,7 +17,7 @@ description: Bhagavad-Gita-API is An opensource lightweight Node.js based rest A
 
 **api-method** : get 
 
-**url** : https://bhagavadgitaapi.in/slok/:ch/:sl
+**url** : https://vedicscriptures.github.io/slok/:ch/:sl
 
 **description** : This endpoint allows you to GET data from Particuler slok & chapter of Shreemad Bhagavad Gita
 
@@ -138,7 +138,7 @@ description: Bhagavad-Gita-API is An opensource lightweight Node.js based rest A
 
 **api-method** : get 
 
-**url** : https://bhagavadgitaapi.in/chapters
+**url** : https://vedicscriptures.github.io/chapters
 
 **description** : This endpoint allows you to get all Chapters details of Shreemad Bhagavad Gita.
 
@@ -182,7 +182,7 @@ description: Bhagavad-Gita-API is An opensource lightweight Node.js based rest A
 
 **api-method** : get 
 
-**url** : https://bhagavadgitaapi.in/chapter/:ch
+**url** : https://vedicscriptures.github.io/chapter/:ch
 
 **description** : GET Particular Chapters details of Shreemad Bhagavad Gita
 

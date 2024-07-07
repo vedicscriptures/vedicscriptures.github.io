@@ -23,7 +23,7 @@ Your address will only be used:
 * to authenticate you own the account for any support requests
 * to send you a password recovery code if you forget it
 * to receive the weekly stats of your account
-* You must opt-in to receive the monthly email from me about other open APIs I'm working on - like [The Bhagavad Gita API](https://bhagavadgitaapi.in/)
+* You must opt-in to receive the monthly email from me about other open APIs I'm working on - like [The Bhagavad Gita API](https://vedicscriptures.github.io/)
 
 It will never be shared with anyone.
 
