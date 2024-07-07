@@ -33,7 +33,7 @@ description: Bhagavad-Gita-API is an open-source lightweight Node.js-based REST 
 
 ### Example (JSON Fetch)
 
-```json
+```js
 fetch('https://vedicscriptures.github.io/slok/1/1')
   .then(response => response.json())
   .then(data => console.log(data));
@@ -151,7 +151,7 @@ fetch('https://vedicscriptures.github.io/slok/1/1')
 
 ### Example (JSON Fetch)
 
-```json
+```js
 fetch('https://vedicscriptures.github.io/chapters')
   .then(response => response.json())
   .then(data => console.log(data));
@@ -201,7 +201,7 @@ fetch('https://vedicscriptures.github.io/chapters')
 
 ### Example (JSON Fetch)
 
-```json
+```js
 fetch('https://vedicscriptures.github.io/chapter/1')
   .then(response => response.json())
   .then(data => console.log(data));
